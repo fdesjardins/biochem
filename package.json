@@ -1,0 +1,37 @@
+{
+  "name": "biochem1",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon -w conspectus -w build.sh --ext md,sh,json -x bash build.sh"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^12.0.1"
+  },
+  "eslintConfig": {
+    "extends": "standard",
+    "rules": {
+      "object-curly-spacing": [
+        2,
+        "always"
+      ],
+      "array-bracket-spacing": [
+        2,
+        "always"
+      ],
+      "func-style": [
+        2,
+        "expression"
+      ],
+      "prefer-arrow-callback": [
+        2,
+        {
+          "allowNamedFunctions": false
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "decimal.js": "^10.0.1"
+  }
+}
