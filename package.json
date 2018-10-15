@@ -2,7 +2,12 @@
   "name": "biochem1",
   "version": "1.0.0",
   "scripts": {
-    "start": "nodemon -w conspectus -w build.sh --ext md,sh,json -x bash build.sh"
+    "01": "relaxed conspectus/01.pug build/01.pdf -w conspectus -t /tmp",
+    "02": "relaxed conspectus/02.pug build/02.pdf -w conspectus -t /tmp",
+    "03": "relaxed conspectus/03.pug build/03.pdf -w conspectus -t /tmp",
+    "04": "relaxed conspectus/04.pug build/04.pdf -w conspectus -t /tmp",
+    "05": "relaxed conspectus/05.pug build/05.pdf -w conspectus -t /tmp",
+    "06": "relaxed conspectus/06.pug build/06.pdf -w conspectus -t /tmp"
   },
   "license": "MIT",
   "devDependencies": {
@@ -32,6 +37,10 @@
     }
   },
   "dependencies": {
-    "decimal.js": "^10.0.1"
+    "decimal.js": "^10.0.1",
+    "execa": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-pandoc": "^0.2.2",
+    "relaxedjs": "^0.1.11"
   }
 }
