@@ -1,5 +1,5 @@
 mixin aaTable(type, items)
-  table(style="width: 100%; font-size: 70%; text-align: center;")
+  table(style="width: 100%; font-size: 72%; text-align: center;")
     thead
       tr
         th(style="width: 20%;")
@@ -27,17 +27,17 @@ mixin aaTable(type, items)
 
 h1 5.0 Introduction to Proteins
 
-h2 Overview
-
-ol
-  li Know the structures and be able to draw and name all AA’s
-  li Know the pKa ranges of all AA’s.
-  li Understand ionization and be able to calculate isoelectric points (pI’s) of oligopeptides
-  li Read how the nonstandard AA’s are made and used
-  li Know the polypeptide formation and understand the polypeptide diversity
-  li Understand protein purification techniques
-  li Understand protein sequencing
-  li Read about the protein evolution
+section
+  h2 Objectives
+  ol
+    li Know the structures and be able to draw and name all AA’s
+    li Know the pKa ranges of all AA’s
+    li Understand ionization and be able to calculate isoelectric points (pI’s) of oligopeptides
+    li Read how the nonstandard AA’s are made and used
+    li Know the polypeptide formation and understand the polypeptide diversity
+    li Understand protein purification techniques
+    li Understand protein sequencing
+    li Read about the protein evolution
 
 section
   h2 5.1 Amino Acids
@@ -47,6 +47,7 @@ section
     | 20 common (and 2 rare) amino acids are coded for in our genetic code. Amino
     | acids come in three predominate forms, nonpolar, polar-charged, and polar-uncharged:
 
+section
   +aaTable('Nonpolar Aliphatic', [
     [ 'Glycine', 'Gly, G', '2.34', '9.60', '5.97' ],
     [ 'Alanine', 'Ala, A', '2.23', '9.69', '6.00' ],
@@ -80,17 +81,16 @@ section
     [ 'Glutamic Acid', 'Glu, E', '2.19', '9.67', '3.22' ]
   ])
 
+section
   p
     | In the table above, pI represents the isoelectric point, the pH at which
     | the molecule has a neutral overall charge and the zwitterion form is dominant.
-
   p
     | The isoelectric point can be calculated for oligopeptides by assuming each
     | peptide is fully protonated (pH=0) and incrementing charges on each group
     | as the pH is raised and groups are deprotonated until the net charge is zero.
-
   p
-    | In addition to the amino acids above, there is a group of "nonstandard" amino acids
+    | In addition to the amino acids listed above, there is a group of "nonstandard" amino acids
     | that can be created in other organisms, as well as post-translational modification
     | of the standard amino acids.
 
@@ -104,19 +104,18 @@ section
 section
   h2 5.3 Proteins: Polypeptides of Defined Sequence
   p
-    | When polypeptides reach a defined length and sequence they're often referred
-    | to as proteins. This sequence is the primary structure of the protein.
-
+    | When polypeptides reach a defined length and sequence they're referred
+    | to as proteins. This sequence of peptides is defined as the primary structure of the protein.
   p
-    | Determining proteins requires analysis, which was tranditionally accomplished
+    | Determining proteins requires analysis which was tranditionally accomplished
     | using protein purification methods such as anion exchange chromatography (IEC)
     | and size exclusion chromatography (SEC). These techniques use features of the proteins,
-    | such as pI, polarity, solubility, etc., to fractionate proteins.
+    | such as pI, polarity, solubility, and more, to purify proteins for further analysis.
 
 section
   h2 5.4 From Gene to Protein
   p
-    | As discussed in the previous chapter, proteins are ultimately determined by
+    | Proteins are ultimately determined by
     | genetic sequences in a series of well-known steps. DNA is transcribed into
     | sequences of mRNA, which is then translated into amino acids. These amino acids
     | form peptides and polypeptides, eventually forming proteins in the body.
@@ -126,7 +125,9 @@ section
   p
     | Though biochemistry has been historically more concerned with studying
     | functions and structures of macromolecules, disciplines such as systems biology
-    | have recently started delving deeper into the function of proteins. In the body,
+    | have recently started delving deeper into the function of proteins.
+  p
+    | In the body,
     | thousands of molecules may form complex interactions. In contemporary biochemistry,
     | computers are being used to create simulations of these interactions to help
     | determine the functions of proteins and gene sequences.
@@ -137,12 +138,12 @@ section
     | Protein sequencing is a process that evaluates the total amino acid composition
     | and other metrics to determine relationships between proteins and genetic sequences.
     | Sequences are reconstructed from polypeptides that have been degraded using Edman
-    | Degradation followed by polypeptide cleavage.
+    | Degradation followed by a polypeptide cleavage procedure.
 
   p
-    | Protein sequences are also used to determine evolution relationships between
+    | Protein sequences are also used to determine evolutionary relationships between
     | organisms. By comparing distributions of proteins, genetic similarities can
-    | be determined that may provide information about evolutionary ancestry. Phylogenetics
+    | be deduced that may provide information about evolutionary ancestry. Phylogenetics
     | is the science concerned with mapping these relationships.
 
 style

@@ -1,6 +1,6 @@
 h1 6.0 The Three-Dimensional Structure of Proteins
 
-h2 Overview
+h2 Objectives
 
 ol
   li Know the 4 levels of structural complexity of proteins
@@ -15,58 +15,136 @@ ol
 
 section
   h2 6.1 Secondary Structure
+  p
+    | Proteins have four levels of structural complexity:
   ul
-    li alpha helices
-    li beta sheets
-    li ramachandran plots
+    li
+      b Primary (1˚) &nbsp
+      | structure is the amino acid sequence
+    li
+      b Secondary (2˚) &nbsp
+      | structure is local areas of protein chain structure
+    li
+      b Tertiary (3˚) &nbsp
+      | structure is the arrangement of secondary structural elements
+    li
+      b Quaternary (4˚) &nbsp
+      | structure is the arrangement of polypeptides to form multisubunit complexes
+  p
+    | Common secondary protein structures:
+  ul
+    li \(\alpha\) helices
+    li \(\beta\) sheets
+    li Reverse turns
+    li \(\beta\) bulges
+    li Coils
+    li \(\Omega\) loops
+  p
+    | Both \(\alpha\) helices and \(\beta\) sheets are important structural units that together
+    | form more complex arrangements of proteins. In fact, these arrangements are the
+    | most commonly observed secondary structures in proteins.
+  p
+    | Reverse turns are regions where a polypeptide makes a sharp turn, and are common
+    | at the surface of globular proteins. \(\beta\) bulges are areas of dense Hydrogen
+    | bonding of \(\beta\) sheets.
+  p
+    | Coils are secondary structures where polypeptides
+    | wrap around themselves or other polypeptides. \(\Omega\) loops are strands of
+    | amino acid sequences that loop back on themselves, forming a shape similar to the
+    | Greek letter Omega (\(\Omega\)). These structures may then go on to form
+    | supersecondary structures called motifs.
+
+br
+br
 
 section
   h2 6.2 Fibrous Proteins
-  ul
-    li keratins
-    li fibroin
-    li collagen
+  p
+    | Some proteins, known as "fibrous" proteins, are remarkable for their filamentous
+    | forms. These proteins form many of the hard, elastic, and connective tissues
+    | in animals and other organisms.
+
+  h3 Keratins
+  p
+    | Keratins are classes of proteins with long peptide sequences that make up many
+    | animal tissues. \(\alpha\) keratins in particular are common in hair, horns,
+    | nails, and feathers, and are distinguished by a 3.6 residue/turn \(\alpha\)-helix,
+    | which tends to create coiled-coil structures where the inside of the coils form
+    | a hydrophobic interface.
+
+  h3 Fibroin
+  p
+    | The \(\beta\) sheet structure can be arranged in stacked, antiparallel forms
+    | that yield both flexibility and strength. The strong Van der Waals interactions
+    | of \(\beta\) sheets are what give spider silk its impressive tensile strength, in
+    | a structure called \(\beta\) silk fibroin.
+
+  h3 Collagen
+  p
+    | Collagen is another fibrous protein, a triple helix structure found in skin,
+    | tendons, cartilage, bone, and teeth. Like keratin, collagen's multiple-helix
+    | structure gives it ample flexibility and strength.
 
 section
   h2 6.3 Globular Proteins
-  ul
-    li folding
-    li domains
-    li turns
+  p
+    | Groups of folded \(\alpha\)-helices and \(\beta\)-sheets can form higher-level
+    | structures known as globular proteins. These proteins form when secondary structures
+    | pack closely together to create more stable structures.
 
 section
   h2 6.4 Factors Determining Secondary and Tertiary Structure
-  ul
-    li folding and denaturation
-    li thermodynamics of folding
-    li conformational energy
-    li internal H bonds
-    li van der waals
-    li hydrophobic effect
-    li disulfide bonds and stability
-    li prosthetic groups, ion bonding, protein stability
+  p
+    | The final structure of a protein is determined by a complex set of variables
+    | ranging from temperature, pH, and influence from other molecules. Primary
+    | thermodynamic factors can be grouped into three categories:
+  ol
+    li Intramolecular Interactions (charge-charge, H-bonds, Van der Waals)
+    li Conformational Entropy
+    li Solvent Entropy
+  p
+    | <i>Chaperones</i> are molecules that promote folding of proteins in a specific way that
+    | increases the likelihood of a particular final product. By using chaperones, the
+    | time and difficulty of folding proteins can be greatly reduced.
+
+br
+br
+br
 
 section
   h2 6.5 Dynamics of Globular Protein Structure
-  ul
-    li kinetics
-    li landscape
-    li intermediate and off-pathway states
-    li chaperones in vivo
-    li misfolding and disease
-    li prions
+  p
+    | When proteins condense,they go through a process known as "folding," where
+    | the molecule twists and turns itself as it descends down an energy gradient
+    | towards a local energy minimum.
+  p
+    | Simulating protein folding is difficult due to the sheer number of
+    | possible conformations for a given protein. Each conformation represents a
+    | potential combinatorial state and, assuming even a modest simulation rate, one
+    | of millions of potential states that may take years to simulate.
+  p
+    | Due to the sensitive, stochastic nature of protein folding, it's sometimes
+    | possible for proteins to misfold. In animals, protein misfolding can lead
+    | to life-threatening diseases. Alzheimer's, Parkinson's, and ALS are a few
+    | of many diseases thought to be caused by or related to protein misfolding.
 
 section
   h2 6.6 Prediction of Protein Secondary and Tertiary Structure
-  ul
-    li predict 2nd
-    li predict 3rd
+  p
+    | As one might expect, predicting higher-level structures in proteins is difficult
+    | due to the large number of complex interactions involved. Some properties of
+    | amino acid sequences provide hints about the secondary structure of proteins.
+    | Computational simulation is the current best method for predicting tertiary
+    | protein structures, and is unfortunately only about 60% accurate.
 
 section
   h2 6.7 Quaternary Structure of Proteins
-  ul
-    li homotypic interactions
-    li heterotypic
+  p
+    | When tertiary protein structures interact, they may form quaternary structures,
+    | the highest protein structure level. These structures are created
+    | and repaired piece-by-piece due to their size. Quaternary structures have some
+    | advantages over tertiary structures, such as increased genetic efficiency and stability.
+    | Quaternary structures are said to have varying degrees of \(\alpha\)-helix or \(\beta\)-sheet character.
 
 style
   include:scss conspectus.scss
