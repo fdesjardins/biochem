@@ -1,3 +1,30 @@
+mixin aaTable(type, items)
+  table(style="width: 100%; font-size: 70%; text-align: center;")
+    thead
+      tr
+        th(style="width: 20%;")
+        th(style="width: 20%;") Name
+        th(style="width: 15%;") Abbreviations
+        th(style="width: 15%;") pKa1 (-COOH)
+        th(style="width: 15%;") pKa2 (-NH3)
+        th(style="width: 15%;") pI
+    tbody
+      tr
+        td: b= type
+        td= items[0][0]
+        td= items[0][1]
+        td= items[0][2]
+        td= items[0][3]
+        td= items[0][4]
+      each item in items.slice(1)
+        tr
+          td
+          td= item[0]
+          td= item[1]
+          td= item[2]
+          td= item[3]
+          td= item[4]
+
 h1 5.0 Introduction to Proteins
 
 h2 Overview
@@ -14,45 +41,109 @@ ol
 
 section
   h2 5.1 Amino Acids
-  ul
-    li structure alpha-aminos
-    li zwitterion
-    li stereochem
-    li names
-    li side chains
-    li modified aminos
+  p
+    | During the cellular translation process, mRNA is decoded into a sequence
+    | of amino acids, which may go on to polymerize and form full proteins. These
+    | 20 common (and 2 rare) amino acids are coded for in our genetic code. Amino
+    | acids come in three predominate forms, nonpolar, polar-charged, and polar-uncharged:
+
+  +aaTable('Nonpolar Aliphatic', [
+    [ 'Glycine', 'Gly, G', '2.34', '9.60', '5.97' ],
+    [ 'Alanine', 'Ala, A', '2.23', '9.69', '6.00' ],
+    [ 'Valine', 'Val, V', '2.32', '9.62', '5.96' ],
+    [ 'Leucine', 'Leu, L', '2.36', '9.60', '5.98' ],
+    [ 'Isoleucine', 'Ile, I', '2.36', '9.60', '6.02' ]
+  ])
+  +aaTable('Nonpolar', [
+    [ 'Proline', 'Pro, P', '1.99', '10.60', '6.30' ],
+    [ 'Methionine', 'Met, M', '2.28', '9.21', '5.74' ]
+  ])
+  +aaTable('Nonpolar Aromatic', [
+    [ 'Phenylalanine', 'Phe, F', '1.83', '9.13', '5.48' ],
+    [ 'Tyrosine', 'Tyr, Y', '2.20', '9.11', '5.66' ],
+    [ 'Tryptophan', 'Trp, T', '2.83', '9.39', '5.89', ]
+  ])
+  +aaTable('Polar', [
+    [ 'Serine', 'Ser, S', '2.21', '9.15', '5.68' ],
+    [ 'Cysteine', 'Cys, C', '1.96', '10.28', '5.07' ],
+    [ 'Threonine', 'Thr, T', '2.09', '9.10', '5.60' ],
+    [ 'Asparagine', 'Asn, N', '2.02', '8.80', '5.41' ],
+    [ 'Glutamine', 'Gln, Q', '2.17', '9.13', '5.65' ]
+  ])
+  +aaTable('Polar (+)', [
+    [ 'Histidine', 'His, H', '1.82', '9.17', '7.59' ],
+    [ 'Lysine', 'Lys, K', '2.18', '9.21', '5.74' ],
+    [ 'Arginine', 'Arg, R', '2.17', '9.04', '10.76' ]
+  ])
+  +aaTable('Polar (-)', [
+    [ 'Aspartic Acid', 'Asp, D', '1.88', '9.60', '2.77' ],
+    [ 'Glutamic Acid', 'Glu, E', '2.19', '9.67', '3.22' ]
+  ])
+
+  p
+    | In the table above, pI represents the isoelectric point, the pH at which
+    | the molecule has a neutral overall charge and the zwitterion form is dominant.
+
+  p
+    | The isoelectric point can be calculated for oligopeptides by assuming each
+    | peptide is fully protonated (pH=0) and incrementing charges on each group
+    | as the pH is raised and groups are deprotonated until the net charge is zero.
+
+  p
+    | In addition to the amino acids above, there is a group of "nonstandard" amino acids
+    | that can be created in other organisms, as well as post-translational modification
+    | of the standard amino acids.
 
 section
   h2 5.2 Peptides and the Peptide Bond
-  ul
-    li peptide bond
+  p
+    | Amino acids may be convalently bonded to each other via amide, or peptide bonds,
+    | in structures known as polypeptides. These bonds form between the \(\alpha\)-carboxylic
+    | acid group in one amino acid and the \(\alpha\)-amino group in another.
 
 section
   h2 5.3 Proteins: Polypeptides of Defined Sequence
-  ul
-    li aka primary structure
-    li conservative vs non
-    li insulin
+  p
+    | When polypeptides reach a defined length and sequence they're often referred
+    | to as proteins. This sequence is the primary structure of the protein.
+
+  p
+    | Determining proteins requires analysis, which was tranditionally accomplished
+    | using protein purification methods such as anion exchange chromatography (IEC)
+    | and size exclusion chromatography (SEC). These techniques use features of the proteins,
+    | such as pI, polarity, solubility, etc., to fractionate proteins.
 
 section
   h2 5.4 From Gene to Protein
-  ul
-    li DNA -> mRNA -> proteins
-    li 4^3 (64) combos
-    li nearly all orgs use same codons
-    li prost-translation
+  p
+    | As discussed in the previous chapter, proteins are ultimately determined by
+    | genetic sequences in a series of well-known steps. DNA is transcribed into
+    | sequences of mRNA, which is then translated into amino acids. These amino acids
+    | form peptides and polypeptides, eventually forming proteins in the body.
 
 section
   h2 5.5 From Gene to Sequence to Protein Function
-  ul
-    li systems bio
-    li genome sequencing
-    li genbank, pdb
+  p
+    | Though biochemistry has been historically more concerned with studying
+    | functions and structures of macromolecules, disciplines such as systems biology
+    | have recently started delving deeper into the function of proteins. In the body,
+    | thousands of molecules may form complex interactions. In contemporary biochemistry,
+    | computers are being used to create simulations of these interactions to help
+    | determine the functions of proteins and gene sequences.
 
 section
   h2 5.6 Protein Sequence Homology
-  ul
-    li phylogenetics
+  p
+    | Protein sequencing is a process that evaluates the total amino acid composition
+    | and other metrics to determine relationships between proteins and genetic sequences.
+    | Sequences are reconstructed from polypeptides that have been degraded using Edman
+    | Degradation followed by polypeptide cleavage.
+
+  p
+    | Protein sequences are also used to determine evolution relationships between
+    | organisms. By comparing distributions of proteins, genetic similarities can
+    | be determined that may provide information about evolutionary ancestry. Phylogenetics
+    | is the science concerned with mapping these relationships.
 
 style
   include:scss conspectus.scss
