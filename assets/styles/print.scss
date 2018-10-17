@@ -1,6 +1,8 @@
-a, blockquote, p {
-  page-break-inside: avoid;
-}
+a,
+blockquote,
+p,
+article,
+section,
 h1,
 h2,
 h3,
@@ -22,4 +24,7 @@ ul,
 ol,
 dl {
   page-break-before: avoid;
+}
+article {
+  page-break-before: always;
 }

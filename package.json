@@ -7,7 +7,8 @@
     "03": "relaxed conspectus/03.pug build/03.pdf -w conspectus -t /tmp",
     "04": "relaxed conspectus/04.pug build/04.pdf -w conspectus -t /tmp",
     "05": "relaxed conspectus/05.pug build/05.pdf -w conspectus -t /tmp",
-    "06": "relaxed conspectus/06.pug build/06.pdf -w conspectus -t /tmp"
+    "06": "relaxed conspectus/06.pug build/06.pdf -w conspectus -t /tmp",
+    "book": "relaxed conspectus/book.pug build/book.pdf -w conspectus -t /tmp"
   },
   "license": "MIT",
   "devDependencies": {
