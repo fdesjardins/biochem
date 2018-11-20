@@ -1,8 +1,7 @@
 a,
 blockquote,
 p,
-article,
-section,
+.chapter,
 h1,
 h2,
 h3,
@@ -11,6 +10,13 @@ h5,
 h6 {
   page-break-after: avoid;
   page-break-inside: avoid;
+}
+section {
+  > h1,
+  > h2,
+  > h3 {
+    page-break-after: avoid;
+  }
 }
 img {
   page-break-inside: avoid;
@@ -25,6 +31,16 @@ ol,
 dl {
   page-break-before: avoid;
 }
-article {
+.chapter {
   page-break-before: always;
 }
+
+// 2 columns hack
+// @page {
+//   margin: 2cm 1cm;
+// }
+// article {
+//   column-count: 2;
+//   column-gap: 1.5cm;
+//   column-rule: thin solid #999;
+// }

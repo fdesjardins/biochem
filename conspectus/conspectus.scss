@@ -1,9 +1,11 @@
 @import '../assets/styles/index';
 
+$text-color: #333;
+
 body {
   font-size: 67%;
-  color: #222;
-  line-height: 1.5em;
+  color: $text-color;
+  line-height: 1.75em;
 }
 h1,
 h2,
@@ -23,7 +25,8 @@ label {
   margin-bottom: 0.5em;
   display: block;
 }
-ul, ol {
+ul,
+ol {
   margin-bottom: 2em;
   padding-left: 3em;
 }
@@ -37,14 +40,23 @@ table {
   size: A4 portrait;
   counter-increment: page;
   margin: 4cm 3.5cm;
+  // margin: 0;
 }
 
-// 2 columns hack
-// @page {
-//   margin: 2cm 1cm;
-// }
-// article {
-//   column-count: 2;
-//   column-gap: 1.5cm;
-//   column-rule: thin solid #999;
-// }
+.cover-page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 15%;
+}
+
+.chapter > section.header {
+  // border-top: 1px dashed $text-color;
+  border-bottom: 1px dashed $text-color;
+  width: 100%;
+  display: block;
+  padding: 2em;
+}
