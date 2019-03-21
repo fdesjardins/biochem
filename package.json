@@ -10,6 +10,8 @@
     "06": "relaxed conspectus/06.pug build/06.pdf -w conspectus -t /tmp",
     "07": "relaxed conspectus/07.pug build/07.pdf -w conspectus -t /tmp",
     "08": "relaxed conspectus/08.pug build/08.pdf -w conspectus -t /tmp",
+    "09": "relaxed conspectus/09.pug build/09.pdf -w conspectus -t /tmp",
+    "10": "relaxed conspectus/10.pug build/10.pdf -w conspectus -t /tmp",
     "book": "relaxed conspectus/book.pug build/book.pdf -w conspectus -t /tmp"
   },
   "license": "MIT",
