@@ -1,0 +1,66 @@
+@import '../assets/styles/index';
+
+body {
+  font-size: 1.2em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.card {
+  page-break-after: always;
+  border: 1px dashed #777;
+
+  .front,
+  .back {
+    position: relative;
+    height: 49.9vh;
+    padding: 3em 3.75em;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+  }
+
+  .front {
+    border-bottom: 1px dashed #555;
+    ul,
+    ol {
+      margin-top: 1em;
+      margin-left: 3em;
+      li {
+        margin-bottom: 0.5em;
+      }
+    }
+    ul {
+      list-style: lower-alpha;
+    }
+  }
+
+  .back {
+    align-items: center;
+    .answer {
+      text-align: center;
+    }
+  }
+
+  .question:before,
+  .answer:before {
+    font-size: 1.5em;
+    position: absolute;
+    left: 0em;
+    top: 0em;
+    background: #eee;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .question:before {
+    content: 'Q';
+  }
+  .answer:before {
+    content: 'A';
+  }
+}
